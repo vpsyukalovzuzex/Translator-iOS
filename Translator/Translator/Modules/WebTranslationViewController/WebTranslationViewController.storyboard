@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JUi-15-Mg6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web Translation View Controller-->
+        <scene sceneID="h7X-jU-d08">
+            <objects>
+                <viewController id="JUi-15-Mg6" customClass="WebTranslationViewController" customModule="TranslatorJoshua" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXW-Lw-iOg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-Im-DvL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yk-0Z-13V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-SU-DX8">
+                                        <rect key="frame" x="0.0" y="-3" width="48" height="56"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" name="r_janna_blue"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="16" maxX="8" maxY="16"/>
+                                        <state key="normal" image="r_clear"/>
+                                        <connections>
+                                            <action selector="closeButtonAction:" destination="JUi-15-Mg6" eventType="touchUpInside" id="PPg-2p-4CN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIX-Gj-FHb">
+                                        <rect key="frame" x="48" y="-3" width="40" height="56"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" name="r_janna_blue"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="16" maxX="8" maxY="16"/>
+                                        <state key="normal" image="r_refresh"/>
+                                        <connections>
+                                            <action selector="refreshButtonAction:" destination="JUi-15-Mg6" eventType="touchUpInside" id="6Wa-Pt-nph"/>
+                                        </connections>
+                                    </button>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="URL" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkC-AD-w76">
+                                        <rect key="frame" x="88" y="-3" width="205" height="56"/>
+                                        <color key="barTintColor" name="r_main"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="url"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="JUi-15-Mg6" id="onB-g2-ys3"/>
+                                        </connections>
+                                    </searchBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sM-P1-njT">
+                                        <rect key="frame" x="293" y="7" width="77" height="36"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-Cy-qw2">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-R1-XoK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="36"/>
+                                                        <color key="backgroundColor" name="r_main"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="9" maxX="8" maxY="9"/>
+                                                        <state key="normal" title="EN">
+                                                            <color key="titleColor" name="r_janna_blue"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="fromLanguageButtonAction:" destination="JUi-15-Mg6" eventType="touchUpInside" id="5Wh-gT-X31"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mox-B8-qid">
+                                                        <rect key="frame" x="38" y="0.0" width="39" height="36"/>
+                                                        <color key="backgroundColor" name="r_janna_blue"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <inset key="contentEdgeInsets" minX="8" minY="9" maxX="10" maxY="9"/>
+                                                        <state key="normal" title="RU">
+                                                            <color key="titleColor" name="r_main"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="toLanguageButtonAction:" destination="JUi-15-Mg6" eventType="touchUpInside" id="5rI-nz-enN"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="tintColor" name="r_janna_blue"/>
+                                        <constraints>
+                                            <constraint firstItem="EcE-Cy-qw2" firstAttribute="leading" secondItem="4sM-P1-njT" secondAttribute="leading" id="D9u-9V-Y84"/>
+                                            <constraint firstAttribute="trailing" secondItem="EcE-Cy-qw2" secondAttribute="trailing" id="SDS-z9-bMK"/>
+                                            <constraint firstAttribute="bottom" secondItem="EcE-Cy-qw2" secondAttribute="bottom" id="ZJ2-e8-Gkc"/>
+                                            <constraint firstItem="EcE-Cy-qw2" firstAttribute="top" secondItem="4sM-P1-njT" secondAttribute="top" id="bGO-MZ-Elx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gza-J7-ksT">
+                                        <rect key="frame" x="382" y="15" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="44C-lr-U4T"/>
+                                    <constraint firstItem="gza-J7-ksT" firstAttribute="centerY" secondItem="4sM-P1-njT" secondAttribute="centerY" id="4P8-CA-NmG"/>
+                                    <constraint firstItem="R5J-SU-DX8" firstAttribute="centerY" secondItem="6yk-0Z-13V" secondAttribute="centerY" id="8vj-vB-mHZ"/>
+                                    <constraint firstItem="JkC-AD-w76" firstAttribute="centerY" secondItem="NIX-Gj-FHb" secondAttribute="centerY" id="CoR-Zx-Qg8"/>
+                                    <constraint firstItem="NIX-Gj-FHb" firstAttribute="centerY" secondItem="R5J-SU-DX8" secondAttribute="centerY" id="V4c-Tw-gxV"/>
+                                    <constraint firstItem="JkC-AD-w76" firstAttribute="leading" secondItem="NIX-Gj-FHb" secondAttribute="trailing" id="bc9-7a-nnf"/>
+                                    <constraint firstItem="R5J-SU-DX8" firstAttribute="leading" secondItem="6yk-0Z-13V" secondAttribute="leading" id="dyA-1v-ipE"/>
+                                    <constraint firstItem="4sM-P1-njT" firstAttribute="centerY" secondItem="JkC-AD-w76" secondAttribute="centerY" id="fOE-Tf-nLL"/>
+                                    <constraint firstItem="gza-J7-ksT" firstAttribute="leading" secondItem="4sM-P1-njT" secondAttribute="trailing" constant="12" id="iuE-CP-I8e"/>
+                                    <constraint firstItem="4sM-P1-njT" firstAttribute="leading" secondItem="JkC-AD-w76" secondAttribute="trailing" id="jxE-gc-i6h"/>
+                                    <constraint firstAttribute="trailing" secondItem="gza-J7-ksT" secondAttribute="trailing" constant="12" id="kUR-Km-ubT"/>
+                                    <constraint firstItem="NIX-Gj-FHb" firstAttribute="leading" secondItem="R5J-SU-DX8" secondAttribute="trailing" id="kke-ke-IIW"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4G-Hw-T7d">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" name="r_main"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="miT-2J-56e"/>
+                        <color key="backgroundColor" name="r_main"/>
+                        <constraints>
+                            <constraint firstItem="6yk-0Z-13V" firstAttribute="top" secondItem="miT-2J-56e" secondAttribute="top" id="4KW-jv-KcT"/>
+                            <constraint firstItem="miT-2J-56e" firstAttribute="trailing" secondItem="Y4G-Hw-T7d" secondAttribute="trailing" id="AjI-Bv-Aja"/>
+                            <constraint firstItem="i6v-Im-DvL" firstAttribute="leading" secondItem="LXW-Lw-iOg" secondAttribute="leading" id="Bpo-fL-oRG"/>
+                            <constraint firstItem="i6v-Im-DvL" firstAttribute="top" secondItem="LXW-Lw-iOg" secondAttribute="top" id="Dlw-9n-uqj"/>
+                            <constraint firstAttribute="trailing" secondItem="i6v-Im-DvL" secondAttribute="trailing" id="GGx-8O-MNF"/>
+                            <constraint firstItem="Y4G-Hw-T7d" firstAttribute="top" secondItem="6yk-0Z-13V" secondAttribute="bottom" id="JTY-Y6-mmj"/>
+                            <constraint firstItem="6yk-0Z-13V" firstAttribute="leading" secondItem="LXW-Lw-iOg" secondAttribute="leading" id="R88-Rz-fES"/>
+                            <constraint firstItem="6yk-0Z-13V" firstAttribute="top" secondItem="i6v-Im-DvL" secondAttribute="bottom" id="edP-a2-uXC"/>
+                            <constraint firstItem="Y4G-Hw-T7d" firstAttribute="leading" secondItem="miT-2J-56e" secondAttribute="leading" id="ocG-VE-Ovu"/>
+                            <constraint firstItem="miT-2J-56e" firstAttribute="bottom" secondItem="Y4G-Hw-T7d" secondAttribute="bottom" id="pYO-cf-yXU"/>
+                            <constraint firstAttribute="trailing" secondItem="6yk-0Z-13V" secondAttribute="trailing" id="vvD-bH-dJA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="R5J-SU-DX8" id="jZf-mS-EOj"/>
+                        <outlet property="fromLanguageButton" destination="Ch1-R1-XoK" id="P1d-3r-n6Z"/>
+                        <outlet property="indicator" destination="gza-J7-ksT" id="qtY-hK-IeA"/>
+                        <outlet property="refreshButton" destination="NIX-Gj-FHb" id="CXQ-c2-REJ"/>
+                        <outlet property="searchBar" destination="JkC-AD-w76" id="ZIb-Ft-GLK"/>
+                        <outlet property="toLanguageButton" destination="mox-B8-qid" id="nns-mV-Y9l"/>
+                        <outlet property="webView" destination="Y4G-Hw-T7d" id="9MK-q1-AnC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spd-3H-XRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="r_clear" width="24" height="24"/>
+        <image name="r_refresh" width="24" height="24"/>
+        <namedColor name="r_janna_blue">
+            <color red="0.016000000759959221" green="0.55699998140335083" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="r_main">
+            <color red="0.92500001192092896" green="0.94099998474121094" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

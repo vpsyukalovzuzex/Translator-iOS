@@ -3,16 +3,27 @@
 //
 
 import UIKit
+import Api
+import Core
 
 class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        self.setup()
+        Api.parameters["platform"] = "iOS"
+        Api.parameters["paid"] = "\(false)"
+        Core.setupLanguages().done {
+            
+        }.catch { eror in
+            
+        }.finally {
+            
+        }
     }
     
     private func setup() {
-        let a = ConferenceViewController
+        let a = TranslationViewController
             .instantiate()
             .wrap(in: .init())
         let b = ConferenceViewController
@@ -27,6 +38,7 @@ class TabBarController: UITabBarController {
         let e = FakeViewController
             .instantiate()
             .wrap(in: .init())
+        a.navigationController?.setNavigationBarHidden(true, animated: false)
         a.navigationController?.tabBarItem = .init(title: "Translate", image: nil, tag: 0)
         b.navigationController?.tabBarItem = .init(title: "Conference", image: nil, tag: 1)
         c.navigationController?.tabBarItem = .init(title: "Phone", image: nil, tag: 2)
